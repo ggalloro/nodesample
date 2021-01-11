@@ -13,3 +13,6 @@ steps:
   args: ['run', 'build']
 - name: gcr.io/galloro-gke/pack
   args: ['build','--builder','cnbs/sample-builder:bionic','europe-docker.pkg.dev/galloro-gke/gcb-study/nodesample:${_NODE_VER}']
+images:
+- 'europe-docker.pkg.dev/galloro-gke/gcb-study/nodesample:${_NODE_VER}'
+
