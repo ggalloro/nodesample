@@ -11,3 +11,7 @@ steps:
 - name: node:$_NODE_VER
   entrypoint: npm
   args: ['run', 'build']
+- name: gcr.io/cloud-builders/docker
+  args: ['build','-t','europe-docker.pkg.dev/galloro-gke/gcb-study/nodesample:${_NODE_VER}','.']
+images:
+- 'europe-docker.pkg.dev/galloro-gke/gcb-study/nodesample:${_NODE_VER}'
